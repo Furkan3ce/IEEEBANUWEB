@@ -38,9 +38,6 @@
                             <ul>
                                 <li>
                                     <a href="index.html">Anasayfa</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">Hakkında</a>
                                 </li> 
                                 <li>
                                     <a href="event.html">Etkinlikler</a>
@@ -58,19 +55,37 @@
             </header>
         </div>
         <footer>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#" onclick="scrollToTop()">Başa Dön</a></li>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="project.html">Projelerimiz</a></li>
+                    <li><a href="contact.html">İletişime Geç</a></li>
+                </ul>
+            </nav>
             <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
         </footer>
-    
-        <script>
-            // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
-            function toggleText() {
-              const popup = document.getElementById("popupText");
-              // Metin görünürse gizle, görünmezse göster
-              if (popup.style.opacity === "1") {
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Sayfanın en üstüne gitmek için fonksiyon
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
+        function toggleText() {
+            const popup = document.getElementById("popupText");
+            // Metin görünürse gizle, görünmezse göster
+            if (popup.style.opacity === "1") {
                 popup.style.opacity = "0";
-              } else {
+                popup.style.visibility = "hidden";
+            } else {
                 popup.style.opacity = "1";
-              }
+                popup.style.visibility = "visible";
             }
-          </script>
-    </body>
+        }
+    </script>
+    <script src="assets/js/image-slider.js"></script>
+</body>
+</html>

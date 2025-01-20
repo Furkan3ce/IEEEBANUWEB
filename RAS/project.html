@@ -40,9 +40,6 @@
                                     <a href="index.html">Anasayfa</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">Hakkında</a>
-                                </li> 
-                                <li>
                                     <a href="event.html">Etkinlikler</a>
                                 </li>
                                 <li>
@@ -56,21 +53,105 @@
                     </div>
                 </nav>            
             </header>
-        </div>
+            <main class="main-content">
+                <!-- Kapak görseli -->
+                <div class="cover-image">
+                    <img src="assets/images/event/RAS-Ekibi.jpg" alt="">
+                    <div class="cover-text">Projeler</div>
+                </div>
+                <div class="image-container" onclick="toggleText()">
+                    <div class="image">
+                        <img src="assets/images/polendağitici.jpg" alt="Nedir?">
+                    </div>
+                    <div class="content">
+                        <div class="overlay-text">Polen Dağıtıcı</div>
+                        <div class="hidden-text" id="popupText">
+                            IEEE RAS (Robotics and Automation Society),
+                            <br><br>IEEE RAS,
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container" onclick="toggleText()">
+                    <div class="image">
+                        <img src="assets/images/madenaraci.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="overlay-text">Maden Aracı</div>
+                        <div class="hidden-text" id="popupText">
+                            IEEE RAS (Robotics and Automation Society),
+                            <br><br>IEEE RAS,
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container" onclick="toggleText()">
+                    <div class="image">
+                        <img src="assets/images/dijitalkoc.jpg" alt="Nedir?">
+                    </div>
+                    <div class="content">
+                        <div class="overlay-text">Dijital Koç</div>
+                        <div class="hidden-text" id="popupText">
+                            IEEE RAS (Robotics and Automation Society)
+                            <br><br>IEEE RAS,
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container" onclick="toggleText()">
+                    <div class="image">
+                        <img src="assets/images/ecogrowpro.jpg" alt="Nedir?">
+                    </div>
+                    <div class="content">
+                        <div class="overlay-text">Ecogrow Pro</div>
+                        <div class="hidden-text" id="popupText">
+                            IEEE RAS (Robotics and Automation Society)
+                            <br><br>IEEE RAS,
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container" onclick="toggleText()">
+                    <div class="image">
+                        <img src="assets/images/patipass.jpg" alt="Nedir?">
+                    </div>
+                    <div class="content">
+                        <div class="overlay-text">Patipass</div>
+                        <div class="hidden-text" id="popupText">
+                            IEEE RAS (Robotics and Automation Society),
+                            <br><br>IEEE RAS,
+                        </div>
+                    </div>
+                </div>
+               
+            </main>
         <footer>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#" onclick="scrollToTop()">Başa Dön</a></li>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="event.html">Etkinliklerimiz</a></li>
+                    <li><a href="contact.html">İletişime Geç</a></li>
+                </ul>
+            </nav>
             <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
         </footer>
-    
-        <script>
-            // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
-            function toggleText() {
-              const popup = document.getElementById("popupText");
-              // Metin görünürse gizle, görünmezse göster
-              if (popup.style.opacity === "1") {
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Sayfanın en üstüne gitmek için fonksiyon
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
+        function toggleText() {
+            const popup = document.getElementById("popupText");
+            // Metin görünürse gizle, görünmezse göster
+            if (popup.style.opacity === "1") {
                 popup.style.opacity = "0";
-              } else {
+                popup.style.visibility = "hidden";
+            } else {
                 popup.style.opacity = "1";
-              }
+                popup.style.visibility = "visible";
             }
-          </script>
-    </body>
+        }
+    </script>
+    <script src="assets/js/image-slider.js"></script>
+</body>
+</html>
